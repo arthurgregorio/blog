@@ -1,10 +1,8 @@
 ---
-title: Sobre
+title: Olá
 icon: fas fa-info-circle
 order: 4
 ---
-
-## Olá! 
 
 Eu sou o Arthur, estou na área de TI desde 2007 (oficialmente) e neste momento sou analista de sistemas/dev/software engineer/tech lead (chame como prefeir ahahah)
 em alguma empresa que trabalha com Java/Kotlin e tem projetos bem legais.
