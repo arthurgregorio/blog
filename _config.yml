@@ -1,55 +1,36 @@
 # The Site Configuration
 
-# Import the theme
 theme: jekyll-theme-chirpy
 
-# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
-# and doesn't have a custom domain.
 baseurl: '/blog'
-
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
 lang: pt-BR
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: America/Sao_Paulo
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# ↓ --------------------------
+title: AG.Blog
+tagline: Coisas que aprendi por ai
+description: >-
+  Tecnologia, coisas sobre desenvolvimento
+  de software, kotlin, java e assuntos 
+  relacionados ao meu dia-a-dia
 
-title: Chirpy                          # the main title
-
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
-
-description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
-
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://arthurgregorio.github.io'
 
 github:
-  username: arthurgregorio             # change to your github username
+  username: arthurgregorio
 
 twitter:
-  username: gregorioarthur            # change to your twitter username
+  username: gregorioarthur
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Arthur Gregório
-  email: arthurshakal@gmail.com             # change to your email address
+  email: arthurshakal@gmail.com
   links:
     - https://twitter.com/gregorioarthur
     - https://github.com/arthurgregorio
     - https://www.linkedin.com/in/gregorioarthur
 
-google_site_verification: google_meta_tag_verification # change to your verification string
-
-# ↑ --------------------------
-
+google_site_verification: google_meta_tag_verification
 
 google_analytics:
   id: ''              # fill in your Google Analytics ID
