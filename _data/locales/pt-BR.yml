@@ -42,18 +42,18 @@ copyright:
     link: https://creativecommons.org/licenses/by/4.0/
 
   # Displayed in the footer
-  brief: Some rights reserved.
+  brief: Alguns direitos reservados.
   verbose: >-
     Exceto onde é mencionado, os posts deste blog são licenciados
     sob Creative Commons Attribution 4.0 International (CC BY 4.0) pelo autor.
 
-meta: Powered by :PLATFORM with :THEME theme.
+meta: Este blog usa o :PLATFORM com o tema :THEME.
 
 not_found:
-  statment: Ops, conteúdo não encontrado ou a URL esta incorreta
-  hint_template: :HEAD_BAK ou tente buscar no :ARCHIVES_PAGE.
+  statment: Conteúdo não encontrado ou a URL esta incorreta
+  hint_template: :HEAD_BAK ou tente buscar nos :ARCHIVES_PAGE.
   head_back: Volte para home
-  archives_page: Arquivos
+  archives_page: arquivos
 
 # ----- Posts related labels -----
 
