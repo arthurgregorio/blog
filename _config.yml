@@ -47,7 +47,7 @@ theme_mode:   # [light|dark]
 # e.g. 'https://cdn.com'
 img_cdn:
 
-avatar: /data/avatar.jpg
+avatar: '/assets/images/avatar.jpg'
 
 toc: true
 
