@@ -30,10 +30,10 @@ social:
     - https://github.com/arthurgregorio
     - https://www.linkedin.com/in/gregorioarthur
 
-google_site_verification: google_meta_tag_verification
+google_site_verification: 
 
 google_analytics:
-  id: 'G-9JWKGQW2M6'
+  id: ''
   pv:
     proxy_endpoint:
     cache_path:
@@ -47,7 +47,7 @@ theme_mode:   # [light|dark]
 # e.g. 'https://cdn.com'
 img_cdn:
 
-avatar:
+avatar: /data/avatar.jpg
 
 toc: true
 
