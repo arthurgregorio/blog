@@ -21,7 +21,9 @@ O comando ficou assim:
 
 ```powershell
 Get-ChildItem -include *.java -recurse | ForEach-Object { 
-     if( !( select-string -pattern "Arthur Gregorio, AG.Software" -path $_.FullName) ) { $_.FullName}
+     if( !( select-string -pattern "Arthur Gregorio, AG.Software" -path $_.FullName) ) {
+          $_.FullName
+     }
 }
 ``` 
 
