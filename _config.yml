@@ -46,9 +46,9 @@ avatar: '/assets/img/avatar.jpg'
 toc: true
 
 comments:
-  active:
+  active: 
     disqus:
-      shortname: arthurgregorio
+      shortname: 'arthurgregorio'
 
 paginate: 10
 
