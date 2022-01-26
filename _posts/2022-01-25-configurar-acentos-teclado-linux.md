@@ -10,8 +10,7 @@ image:
 comments: false
 ---
 
-Ai você resolve instalar o linux no seu computador ou notebook e acaba descobrindo que o teclado não funciona mais como antes, seu cedilha
-não funciona e os acentos estão todos em locais estranhos... Como resolver?
+Instalei o linux no meu notebook com teclado em Inglês, porém, mesmo ajustando o teclado para o idioma correto ele ainda não consigo fazer os acentos em Português, como arrumar?
 
 ## Um pouco de história
 
