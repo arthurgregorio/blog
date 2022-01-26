@@ -40,14 +40,8 @@ google_analytics:
 
 theme_mode:   # [light|dark]
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn:
-
-avatar: '/assets/images/avatar.jpg'
+img_cdn: 'https://res.cloudinary.com/arthurgregorio/image/upload/v1643156145/blog'
+avatar: '/assets/img/avatar.jpg'
 
 toc: true
 
