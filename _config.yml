@@ -40,8 +40,9 @@ google_analytics:
 
 theme_mode:   # [light|dark]
 
-img_cdn: 'https://res.cloudinary.com/arthurgregorio/image/upload/v1643156145/blog'
-avatar: '/assets/img/avatar.jpg'
+img_cdn: 'https://res.cloudinary.com/arthurgregorio/image/upload'
+
+avatar: '/v1643158269/blog/avatar_jiad0h.jpg'
 
 toc: true
 

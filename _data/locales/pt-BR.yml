@@ -36,7 +36,6 @@ date_format:
     archive_month: '%b'
 
 copyright:
-  # Shown at the bottom of the post
   license:
     template: Este post está licenciado sob :LICENSE_NAME pelo autor
     link: https://creativecommons.org/licenses/by/4.0/
@@ -59,8 +58,8 @@ not_found:
 
 post:
   written_by: Por
-  posted: Posted
-  updated: Updated
+  posted: Postado
+  updated: Atualizado
   timeago:
     day: dias atrás
     hour: horas atrás
@@ -69,8 +68,8 @@ post:
   words: palavras
   pageview_measure: visualizações
   read_time:
-    unit: minutos
-    prompt: ler
+    unit: min
+    prompt: para ler
   relate_posts: Leia mais
   share: Compartilhar
   button:
