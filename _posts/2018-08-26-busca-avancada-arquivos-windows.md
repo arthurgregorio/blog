@@ -3,7 +3,6 @@ title: 'Busca avançada de arquivos no windows'
 date: 2018-08-26 01:00:00 +0300
 categories: [windows]
 tags: [powershell, windows]
-comments: false
 ---
 
 Ai um dia você precisa buscar todos os arquivos que não contenham um determinado texto, no linux é fácil, mas e no windows? 

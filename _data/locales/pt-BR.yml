@@ -25,7 +25,7 @@ search:
 panel:
   lastmod: Atualizações recentes
   trending_tags: Tags em alta
-  toc: Conteudos
+  toc: Conteúdos
 
 #  The liquid date format › http://strftime.net/
 date_format:

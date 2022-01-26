@@ -7,7 +7,6 @@ image:
   src: '/v1643156145/blog/configurar-acentos-teclado-linux/teclado-antigo_l4umef.jpg'
   width: 1000
   height: 400
-comments: false
 ---
 
 Instalei o linux no meu notebook com teclado em Inglês, porém, mesmo ajustando o teclado para o idioma correto ele ainda não consigo fazer os acentos em Português, como arrumar?
