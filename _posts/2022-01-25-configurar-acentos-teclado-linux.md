@@ -1,6 +1,6 @@
 ---
 title: 'Configurando acentos para teclados em inglês no linux'
-date: 2022-01-25 20:55:00 +0300
+date: 2018-12-04 01:00:00 +0300
 categories: [linux]
 tags: [teclado, linux, configurando]
 image:
