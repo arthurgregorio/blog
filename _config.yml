@@ -47,9 +47,9 @@ avatar: '/v1643158269/blog/avatar_jiad0h.jpg'
 toc: true
 
 comments:
-  active: 
-    disqus:
-      shortname: 'arthurgregorio'
+  active: 'disqus'
+  disqus:
+    shortname: 'arthurgregorio'
 
 paginate: 10
 
