@@ -1,7 +1,7 @@
 ---
 title: 'Busca avançada de arquivos no windows'
 date: 2018-08-26 01:00:00 +0300
-categories: [windows]
+categories: [Windows]
 tags: [powershell, windows]
 ---
 

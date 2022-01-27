@@ -1,7 +1,7 @@
 ---
 title: 'Configurando acentos para teclados em inglês no linux'
 date: 2018-12-04 01:00:00 +0300
-categories: [linux]
+categories: [Linux]
 tags: [teclado, linux, configurando]
 image:
   src: '/v1643156145/blog/configurar-acentos-teclado-linux/teclado-antigo_l4umef.jpg'
