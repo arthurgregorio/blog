@@ -108,15 +108,17 @@ e que pode, eventualmente, nos retornar algum erro:
 ```kotlin
 @Service
 class CatService(
+    @Value("\${cat-service.url}")
+    private val catServiceUrl: String,
     private val enhancedHttpClient: EnhancedHttpClient
 ) {
 
     fun findCatFact(): String {
 
-        // O cliente http ainda poderia estar encapsulado em outro componente, isso seria util para termos 
+        // O cliente http ainda poderia estar encapsulado em outro componente, isso seria util para termos
         // um maior reaproveitamento do código
 
-        val uri = UriComponentsBuilder.fromHttpUrl("https://catfact.ninja/fact").build().toUri()
+        val uri = UriComponentsBuilder.fromHttpUrl(catServiceUrl).build().toUri()
         return enhancedHttpClient.exchangeWithRetry(RequestEntity("", HttpMethod.GET, uri), String::class).body!!
     }
 }
