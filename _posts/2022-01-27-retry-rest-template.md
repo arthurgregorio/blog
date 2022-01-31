@@ -43,7 +43,7 @@ estratégias a fim de garantir a resiliência de nossas chamadas HTTP, vou deixa
 
 > O Código fonte completo desse artigo você pode encontrar [aqui](https://github.com/arthurgregorio/exemplos-blog/tree/main/rest-retry-template)
 
-Primeiro vamos precisar configurar o [Spring Retry](https://docs.spring.io/spring-batch/docs/current/reference/html/retry.html), que inicialmente era uma parte do Spring Batch mas foi transformado em um novo projeto a parte e pode ser utilizado em qualquer cenário onde vc precisa que um determinado método (ou trecho de código) seja reexecutado dada uma determinada condição de erro (exception).
+Primeiro vamos precisar configurar o [Spring Retry](https://docs.spring.io/spring-batch/docs/current/reference/html/retry.html), que inicialmente era uma parte do Spring Batch mas foi transformado em um novo projeto a parte e pode ser utilizado em qualquer cenário onde você precisa que um determinado método (ou trecho de código) seja reexecutado dada uma determinada condição de erro (exception).
 
 ```kotlin
 @EnableRetry
@@ -66,11 +66,13 @@ class CommonsConfiguration {
 }
 ```
 
+> O RetryTemplate tem mais opções para configuração e elas podem ser vistas [aqui](https://github.com/spring-projects/spring-retry).
+
 Dada a configuração, temos:
 
-Na linha #1 a anotação que vai ativar o uso do RetryTemplate via annotations (não é obrigatório pois não vou mostrar isso aqui). Nas linhas seguintes temos as configurações para que o retry possa fazer um backoff exponencial e que ele só funcione em erros de tipo http-5xx, afinal erros do tipo http-4xx não são possíveis de retry visto que representam (ou deveriam representar!) um estado inconsistente dos dados que foram enviados ao servidor, por isso são chamados de *client errors* e por fim, o builder do nosso RestTemplate.
+Na linha #1 a anotação que vai ativar o uso do RetryTemplate via annotations (não é obrigatório pois não vou mostrar isso aqui). Nas linhas seguintes temos as configurações para que o retry possa fazer um backoff exponencial e que ele só funcione em erros de tipo http-5xx, afinal erros do tipo http-4xx não são possíveis de retry visto que representam (ou deveriam representar!) um estado inconsistente dos dados que foram enviados ao servidor [1], por isso são chamados de *client errors* e por fim, o builder do nosso RestTemplate.
 
-> O RetryTemplate tem mais opções para configuração e elas podem ser vistas [aqui](https://github.com/spring-projects/spring-retry).
+> [1] Existem dois códigos http da familia 4xx que podem sim sofrer retry, seriam o 408 e o 429 ([obrigado Rafael Ponte!](https://twitter.com/gregorioarthur/status/1487267330111549445)) porém, no caso específico do 429 pode ser que você precise de alguma lógica de negócio antes visto que ele pode indicar que você atingiu o limite de requests por segundo/minuto/hora da API de destino
 
 ## Cliente tolerante a falhas
 
