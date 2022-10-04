@@ -61,7 +61,18 @@ FILE=`date +"%Y%m%d%H%M"`${FILE_SUFFIX}
 OUTPUT_FILE=${BACKUP_DIR}/${FILE}
 
 # dump
-pg_dump --file ${OUTPUT_FILE} --host ${HOST} --username ${USER} --format=p --no-owner --section=pre-data --section=data --section=post-data --no-privileges --no-tablespaces --no-unlogged-table-data --inserts ${DATABASE}
+pg_dump --file ${OUTPUT_FILE} 
+  --host ${HOST} 
+  --username ${USER} 
+  --format=p 
+  --no-owner 
+  --section=pre-data 
+  --section=data 
+  --section=post-data 
+  --no-privileges 
+  --no-tablespaces 
+  --no-unlogged-table-data 
+  --inserts ${DATABASE}
 
 # gzipa o arquivo
 gzip $OUTPUT_FILE
