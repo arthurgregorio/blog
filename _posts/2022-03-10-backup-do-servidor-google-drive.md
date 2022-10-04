@@ -32,14 +32,9 @@ Utilizando [este cliente](https://github.com/prasmussen/gdrive/) tudo ficou muit
 
 ### Configurando
 
-Depois de deixar o seu cliente em um local adequado no seu servidor linux, execute o seguinte comando:
+Depois de deixar o seu cliente em um local adequado no seu servidor linux, execute o seguinte comando `gdrive about` e isso irá gerar um link no seu console, copie ele e cole no seu browser, uma tela de autorização do OAuth vai aparecer e lá basta autorizar com sua conta. 
 
-```bash
-gdrive about
-```
-Isso irá gerar um link no seu console, copie ele e cole no seu browser e uma tela de autorização do OAuth vai aparecer, autorize com a sua conta e cole o código de ativação gerado novamente no console e pronto!
-
-Use `gdrive help` para ver a lista de comandos disponíveis.
+Após este processo, copie o código de ativação mostrado e cole novamente no console e pronto! Ah, você ainda pode usar `gdrive help` para ver a lista de comandos disponíveis.
 
 ## O script
 
