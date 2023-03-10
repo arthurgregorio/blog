@@ -99,5 +99,4 @@ solucionar o dual write talvez seja muito complicado?
 Algumas pessoas (mais das antigas talvez hahaha) podem até pensar que utilizar um outbox é basicamente uma maneira mais
 "fashion" de se fazer integrações usando o banco de dados, e realmente, é!
 
-Mas como enviar o evento? Bom, isso é tema para um próximo post onde vou mostrar na prática em como fazer isso usando o
-Debezium!
+Mas como enviar o evento? Bom, isso é tema para um próximo post onde vou mostrar como fazer isso, na prática, em um vídeo!
