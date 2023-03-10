@@ -4,7 +4,7 @@ date: 2022-10-03 22:00:00 +0300
 categories: [Devops]
 tags: [infra, linux, devops, servidores]
 image:
-  src: '/v1664847657/blog/backup-servidor-gdrive/gdrive_d0kngt.webp'
+  path: '/v1664847657/blog/backup-servidor-gdrive/gdrive_d0kngt.webp'
   width: 1000
   height: 400
 ---
@@ -17,11 +17,11 @@ Depois que saí da minha instância do Jelastic, um ótimo cloud provider que te
 
 Lá as coisas são mais "by-hands", ou seja, nada de interfaces botõezinhos coloridos para clicar e ter as coisas funcionando, como toda VPS você precisa acessar o servidor e fazer as instalações que precisa, por conta.
 
-Não é um problema pra mim, subi rapidamente a infra do webBudget v3 com wildfly e postgres, tudo lindo! Até que lembrei que um backup do banco de dados era algo importante. Mas onde eu ia armazenar isso? 
+Não é um problema pra mim, subi rapidamente a infra do webBudget v3 com wildfly e postgres, tudo lindo! Até que lembrei que um backup do banco de dados era algo importante. Mas onde eu ia armazenar isso?
 
 Neste momento, havia 2 opções:
 
-1. Deixar no servidor 
+1. Deixar no servidor
 2. Mandar para algum lugar
 
 A primeira opção era a mais simples porém a que não me serviria de nada caso a minha instância morresse por causas desconhecidas, sendo assim, fiquei com a segunda e o local onde escolhi jogar os arquivos foi o Google Drive.
@@ -32,7 +32,7 @@ Utilizando [este cliente](https://github.com/prasmussen/gdrive/) tudo ficou muit
 
 ### Configurando
 
-Depois de deixar o seu cliente em um local adequado no seu servidor linux, execute o seguinte comando `gdrive about` e isso irá gerar um link no seu console, copie ele e cole no seu browser, uma tela de autorização do OAuth vai aparecer e lá basta autorizar com sua conta. 
+Depois de deixar o seu cliente em um local adequado no seu servidor linux, execute o seguinte comando `gdrive about` e isso irá gerar um link no seu console, copie ele e cole no seu browser, uma tela de autorização do OAuth vai aparecer e lá basta autorizar com sua conta.
 
 Após este processo, copie o código de ativação mostrado e cole novamente no console e pronto! Ah, você ainda pode usar `gdrive help` para ver a lista de comandos disponíveis.
 
@@ -56,17 +56,17 @@ FILE=`date +"%Y%m%d%H%M"`${FILE_SUFFIX}
 OUTPUT_FILE=${BACKUP_DIR}/${FILE}
 
 # dump
-pg_dump --file ${OUTPUT_FILE} 
-  --host ${HOST} 
-  --username ${USER} 
-  --format=p 
-  --no-owner 
-  --section=pre-data 
-  --section=data 
-  --section=post-data 
-  --no-privileges 
-  --no-tablespaces 
-  --no-unlogged-table-data 
+pg_dump --file ${OUTPUT_FILE}
+  --host ${HOST}
+  --username ${USER}
+  --format=p
+  --no-owner
+  --section=pre-data
+  --section=data
+  --section=post-data
+  --no-privileges
+  --no-tablespaces
+  --no-unlogged-table-data
   --inserts ${DATABASE}
 
 # gzipa o arquivo

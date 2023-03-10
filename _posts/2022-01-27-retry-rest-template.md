@@ -4,7 +4,7 @@ date: 2022-01-27 22:00:00 +0300
 categories: [Programação]
 tags: [programacao, kotlin, spring]
 image:
-  src: '/v1643331650/blog/retry-rest-template/Spring-Framework_nuewfg.png'
+  path: '/v1643331650/blog/retry-rest-template/Spring-Framework_nuewfg.png'
   width: 1000
   height: 400
 ---
@@ -14,7 +14,7 @@ image:
 
 ## Um pouco de história
 
-Antes de seguir, precisamos esclarecer uma coisa: se seu projeto é novo e ainda não usa o *RestTemplate* mas você esta pensando 
+Antes de seguir, precisamos esclarecer uma coisa: se seu projeto é novo e ainda não usa o *RestTemplate* mas você esta pensando
 em colocá-lo, pare e não faça isso! O motivo é muito simples e pode ser encontrado nas documentações do spring.
 
 Retirado [daqui](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html):
@@ -23,11 +23,11 @@ Retirado [daqui](https://docs.spring.io/spring-framework/docs/current/javadoc-ap
 
 Ou seja, este post se aplica para clientes onde:
 
-- A versão utilizada do spring ainda não oferece suporte ao WebClient 
+- A versão utilizada do spring ainda não oferece suporte ao WebClient
 - O projeto já utiliza o RestTemplate e não há previsão de mudar para algo mais "atual"
 - Você quer fazer algo com RestTemplate mesmo sabendo que ele esta em modo de manutenção
 
-Isto posto, o motivo de eu estar escrevendo sobre algo "em modo manutenção" esta no início do post, RestTemplate ainda é muito utilizado e eu precisei 
+Isto posto, o motivo de eu estar escrevendo sobre algo "em modo manutenção" esta no início do post, RestTemplate ainda é muito utilizado e eu precisei
 implementar o retry nele, achei justo falar sobre isso por aqui pq achei poucos conteúdos sobre o tema.
 
 Depois pretendo escrever algo semelhante para o WebClient também, então fique ligado!
@@ -191,7 +191,7 @@ class ApplicationTests {
 }
 ```
 
-A ideia por trás dos testes é muito simples: realizamos uma chamada http para o servidor que esta mockado e quando for um caso de erro do servidor, o retry deve atuar 
+A ideia por trás dos testes é muito simples: realizamos uma chamada http para o servidor que esta mockado e quando for um caso de erro do servidor, o retry deve atuar
 e fazer com que o método seja chamado 3x antes de retornar a exception para a classe que chamou o método. No caso de erro do cliente, o retry não deve atuar.
 
 Ficou com dúvidas? Comenta ai em baixo que vou respondendo!

@@ -4,7 +4,7 @@ date: 2022-01-26 21:00:00 +0300
 categories: [Programação]
 tags: [programacao, java, intellij, spring]
 image:
-  src: '/v1643242554/blog/spring-boot-intellij-ce/spring-ij-java_ywamao.png'
+  path: '/v1643242554/blog/spring-boot-intellij-ce/spring-ij-java_ywamao.png'
   width: 1000
   height: 400
 ---

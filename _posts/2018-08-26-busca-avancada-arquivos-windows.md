@@ -3,9 +3,13 @@ title: 'Busca avançada de arquivos no windows'
 date: 2018-08-26 01:00:00 +0300
 categories: [Windows]
 tags: [powershell, windows]
+image:
+  path: '/v1678418132/blog/busca-avancada-windows/terminal_joc3wr.jpg'
+  width: 1000
+  height: 400
 ---
 
-Ai um dia você precisa buscar todos os arquivos que não contenham um determinado texto, no linux é fácil, mas e no windows? 
+Ai um dia você precisa buscar todos os arquivos que não contenham um determinado texto, no linux é fácil, mas e no windows?
 
 ## PowerShell ao resgate
 
@@ -13,18 +17,18 @@ Você já deve ter usado ele para algo mas o que vou mostrar aqui vai além do u
 ou acessar algum diretório.
 
 Pra começar, usei a ferramenta de construção de scripts que o próprio windows tem, o *Windows PowerShell ISE* assim construí um
-script poderoso para fazer uma busca em todos os arquivos, recursivamente, dentro de um conjunto de pastas limitando somente à 
+script poderoso para fazer uma busca em todos os arquivos, recursivamente, dentro de um conjunto de pastas limitando somente à
 aqueles que possuíam extensão ```.java```.
 
 O comando ficou assim:
 
 ```powershell
-Get-ChildItem -include *.java -recurse | ForEach-Object { 
+Get-ChildItem -include *.java -recurse | ForEach-Object {
      if( !( select-string -pattern "Arthur Gregorio, AG.Software" -path $_.FullName) ) {
           $_.FullName
      }
 }
-``` 
+```
 
 A saída do comando foi a lista de arquivos que não tinham o texto *Arthur Gregorio, AG.Software* em seu conteúdo. Simples né?
 
