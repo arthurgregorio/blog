@@ -77,7 +77,7 @@ excessão e sair dando desfazendo as alterações.
 ## Outbox patter to the rescue
 
 Em resumo, o [outbox pattern](https://microservices.io/patterns/data/transactional-outbox.html) consiste em gravar os
-dados pertinentes ao evento que precisamos enviar em uma nova tabela, ou seja, estariámos lidando com apenas um tipo de
+dados pertinentes ao evento que precisamos enviar em uma nova tabela, ou seja, estaríamos lidando com apenas um tipo de
 data store (no caso, o banco de dados) e isso vai nos facilitar manter a consistência visto que podemos usar o mecanismo
 próprio do banco para garantir que, caso haja algum problema, tudo que foi feito naquela transação seja desfeito.
 
@@ -93,10 +93,27 @@ evento seja enviado, um novo serviço seria criado com apenas um único propósi
 for gerado.
 
 Simples né? Nem tanto! Esse é basicamente o conceito de como usar o outbox para definitivamente resolver o problema do dual write.
-Entenderam agora porque eu disse que tavez, para sistema ainda em evolução ou que não estão em sua forma "final" usar
+Entenderam agora porque eu disse que talvez, para sistema ainda em evolução ou que não estão em sua forma "final" usar
 solucionar o dual write talvez seja muito complicado?
 
 Algumas pessoas (mais das antigas talvez hahaha) podem até pensar que utilizar um outbox é basicamente uma maneira mais
 "fashion" de se fazer integrações usando o banco de dados, e realmente, é!
 
-Mas como enviar o evento? Bom, isso é tema para um próximo post onde vou mostrar como fazer isso, na prática, em um vídeo!
+## Outras soluções
+
+Felizmente o mundo da programação é muito rico em soluções mapeadas para problemas já conhecidos, os famosos _patterns_
+e nesse contexto não, seria diferente.
+
+Existem outros meios de se resolver um _dual write_ e vou deixar aqui em baixo um link para uma dessas outras maneiras,
+utilizando o _SAGA pattern_:
+
+- [Microservices Using the Saga Pattern](https://dzone.com/articles/microservices-using-saga-pattern)
+
+> Este post tem uma continuação, você pode acessá-la [aqui]()
+
+## Referências
+
+- [https://thorben-janssen.com/dual-writes/](https://thorben-janssen.com/dual-writes/)
+- [https://www.johnnyhashoul.com/post/dual-write-and-data-inconsistency](https://www.johnnyhashoul.com/post/dual-write-and-data-inconsistency)
+- [https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/dual-write/dual-write-overview](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/dual-write/dual-write-overview)
+- [https://www.confluent.io/blog/using-logs-to-build-a-solid-data-infrastructure-or-why-dual-writes-are-a-bad-idea/](https://www.confluent.io/blog/using-logs-to-build-a-solid-data-infrastructure-or-why-dual-writes-are-a-bad-idea/)

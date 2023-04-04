@@ -70,9 +70,9 @@ class CommonsConfiguration {
 
 Dada a configuração, temos:
 
-Na linha #1 a anotação que vai ativar o uso do RetryTemplate via annotations (não é obrigatório pois não vou mostrar isso aqui). Nas linhas seguintes temos as configurações para que o retry possa fazer um backoff exponencial e que ele só funcione em erros de tipo http-5xx, afinal erros do tipo http-4xx não são possíveis de retry visto que representam (ou deveriam representar!) um estado inconsistente dos dados que foram enviados ao servidor [1], por isso são chamados de *client errors* e por fim, o builder do nosso RestTemplate.
+Na linha #1 a anotação que vai ativar o uso do RetryTemplate via annotations (não é obrigatório, pois não vou mostrar isso aqui). Nas linhas seguintes temos as configurações para que o retry possa fazer um backoff exponencial e que ele só funcione em erros de tipo http-5xx, afinal erros do tipo http-4xx não são possíveis de retry visto que representam (ou deveriam representar!) um estado inconsistente dos dados que foram enviados ao servidor [1], por isso são chamados de *client errors* e por fim, o builder do nosso RestTemplate.
 
-> [1] Existem dois códigos http da familia 4xx que podem sim sofrer retry, seriam o 408 e o 429 ([obrigado Rafael Ponte!](https://twitter.com/gregorioarthur/status/1487267330111549445)) porém, no caso específico do 429 pode ser que você precise de alguma lógica de negócio antes visto que ele pode indicar que você atingiu o limite de requests por segundo/minuto/hora da API de destino
+> [1] Existem dois códigos http da família 4xx que podem, sim, sofrer retry, seriam o 408 e o 429 ([obrigado Rafael Ponte!](https://twitter.com/gregorioarthur/status/1487267330111549445)) porém, no caso específico do 429 pode ser que você precise de alguma lógica de negócio antes visto que ele pode indicar que você atingiu o limite de requests por segundo/minuto/hora da API de destino
 
 ## Cliente tolerante a falhas
 
@@ -98,7 +98,7 @@ class EnhancedHttpClient(
 }
 ```
 
-O código parece meio complexo mas ele nada mais é do que uma chamada aninhada do RestTemplate dentro de um RetryTemplate, assim, em caso de erros (conforme nossa configuração) o retry irá executar a quantidade de tentativas configuradas dentro do período de backoff especificado.
+O código parece meio complexo más ele nada mais é do que uma chamada aninhada do RestTemplate dentro do RetryTemplate, assim, em caso de erros (conforme nossa configuração) o retry irá executar a quantidade de tentativas configuradas dentro do período de backoff especificado.
 
 A complexidade maior fica por conta que dei uma "generificada" nele a fim de possibilitar o reuso por diversos clientes, isso ajuda na manutenção depois!
 
@@ -194,4 +194,4 @@ class ApplicationTests {
 A ideia por trás dos testes é muito simples: realizamos uma chamada http para o servidor que esta mockado e quando for um caso de erro do servidor, o retry deve atuar
 e fazer com que o método seja chamado 3x antes de retornar a exception para a classe que chamou o método. No caso de erro do cliente, o retry não deve atuar.
 
-Ficou com dúvidas? Comenta ai em baixo que vou respondendo!
+Ficou com dúvidas? Comenta aqui em baixo que vou respondendo!
