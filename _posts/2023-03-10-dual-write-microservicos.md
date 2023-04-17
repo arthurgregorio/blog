@@ -1,6 +1,6 @@
 ---
 title: 'Microserviços e o problema do Dual Write'
-date: 2022-10-03 22:00:00 +0300
+date: 2023-03-10 22:00:00 +0300
 categories: [Programação]
 tags: [programacao, java, spring, microsservicos]
 image:

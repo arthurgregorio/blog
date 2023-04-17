@@ -1,6 +1,6 @@
 ---
 title: 'Resolvendo o problema do Dual Write'
-date: 2022-10-26 22:00:00 +0300
+date: 2023-03-26 22:00:00 +0300
 categories: [Programação]
 tags: [programacao, java, spring, microsservicos]
 image:

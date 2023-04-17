@@ -1,6 +1,6 @@
 ---
 title: 'Fazendo backup do servidor para o Drive'
-date: 2022-10-03 22:00:00 +0300
+date: 2023-03-10 22:00:00 +0300
 categories: [Devops]
 tags: [infra, linux, devops, servidores]
 image:
