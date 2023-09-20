@@ -4,7 +4,7 @@ date: 2023-09-18 22:00:00 +0300
 categories: [Programação]
 tags: [programacao, java, kotlin, aws, microserviços, spring]
 image:
-  path: '/v1695173693/blog/aws-spring-sqs-sns-localstack/capa.png'
+  path: '/v1695173963/blog/aws-spring-sqs-sns-localstack/aws_mgcf5g.png'
   width: 1000
   height: 400
 ---
