@@ -2,7 +2,7 @@
 title: 'Artigos da semana #1'
 date: 2023-12-27 12:00:00 +0300
 categories: [Estudos]
-tags: [programacao, java, eventos, spring]
+tags: [programacao, artigos, arquitetura, spring]
 image:
   path: '/v1703699827/blog/japr8ipx1x3oaahcjxgt.png'
   width: 1000
