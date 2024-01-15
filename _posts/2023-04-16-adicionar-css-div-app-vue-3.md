@@ -31,9 +31,7 @@ as classes desejadas, ficando assim:
 
 <script setup>
 import { onMounted } from 'vue'
-import MainMenu from '@/components/menu/MainMenu.vue'
-import PageFooter from '@/components/page/PageFooter.vue'
-import MessageDisplay from '@/components/MessageDisplay.vue'
+
 onMounted(() => {
   document.querySelector('#app').classList.add('page')
 })

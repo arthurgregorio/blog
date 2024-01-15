@@ -16,7 +16,7 @@ do banco de dados. Aqui vou contar um pouco como fiz isso usando o google drive 
 ## Contexto
 
 Depois que saí da minha instância do Jelastic, um ótimo cloud provider que te entrega tudo de maneira simples e com uma
-interface de gerenciamento bem simples, acabei por migrar para um outro mais simples (e drasticamente mais barato!),
+interface de gerenciamento bem simples, acabei por migrar para outro mais simples (e drasticamente mais barato!),
 o [Vultr](https://www.vultr.com/?ref=8069460).
 
 Lá as coisas são mais "by-hands", ou seja, nada de interfaces botõezinhos coloridos para clicar e ter as coisas

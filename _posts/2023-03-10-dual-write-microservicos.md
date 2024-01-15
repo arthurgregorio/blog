@@ -9,7 +9,7 @@ image:
   height: 400
 ---
 
-Hoje vamos falar de um problema quase sempre negligenciado pelos desenvolvedores em seus microsserços (pelo menos até
+Hoje vamos falar de um problema quase sempre negligenciado pelos desenvolvedores em seus microsserviços (pelo menos até
 que aconteça e estrague sua sexta-feira), conheça um pouco mais sobre o _dual write_.
 
 ## Contexto
@@ -21,8 +21,8 @@ Dado o seguinte cenário:
 Veja que:
 
 1. Serviço #1 executa duas operações de escrita, uma em uma fila do Kafka e outra em um banco de dados
-2. Ambas operações ocorrem no mesmo "método", dentro de uma mesma transação
-3. Podemos assumir que não há garantia de que o Kafka ou banco de dados vão estar disponíveis
+2. Ambas operações ocorrem no mesmo "método", em uma mesma transação
+3. Podemos assumir não haver garantia de que o Kafka ou banco de dados vão estar disponíveis
 
 O método que faria esta operação poderia ser escrito como:
 
