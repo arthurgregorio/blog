@@ -1,6 +1,6 @@
 ---
 title: 'Artigos da semana #6'
-date: 2024-07-05 01:00:00 +0300
+date: 2024-07-04 01:00:00 +0300
 categories: [Estudos]
 tags: [programacao, artigos, java, kotlin]
 image:
