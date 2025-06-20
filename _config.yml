@@ -42,7 +42,7 @@ google_analytics:
 
 theme_mode:   # [light|dark]
 
-img_cdn: 'https://res.cloudinary.com/arthurgregorio/image/upload'
+cdn: 'https://res.cloudinary.com/arthurgregorio/image/upload'
 
 avatar: '/v1643158269/blog/avatar_jiad0h.jpg'
 
