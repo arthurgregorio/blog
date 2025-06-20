@@ -13,7 +13,7 @@ title: AG.Blog
 tagline: Coisas que aprendi por ai
 description: >-
   Tecnologia, coisas sobre desenvolvimento
-  de software, kotlin, java e assuntos 
+  de software, kotlin, java e assuntos
   relacionados ao meu dia-a-dia
 
 url: 'https://arthurgregorio.eti.br'
@@ -60,10 +60,13 @@ assets:
 
 pwa:
   enabled: true
+  cache:
+    enabled: true
 
 paginate: 10
 
 kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: highlight
@@ -122,13 +125,13 @@ compress_html:
 exclude:
   - '*.gem'
   - '*.gemspec'
+  - docs
   - tools
   - README.md
-  - CHANGELOG.md
   - LICENSE
-  - gulpfile.js
-  - node_modules
-  - package*.json
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
 
 jekyll-archives:
   enabled: [categories, tags]
